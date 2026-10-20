@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: dipanshu-portfolio-api
+    runtime: node
+    plan: free
+    buildCommand: npm ci --omit=dev --workspace server --include-workspace-root=false
+    startCommand: npm start --workspace server
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 22.16.0
+      - key: TRUST_PROXY_HOPS
+        value: 1
+      - key: MONGODB_URI
+        sync: false
+      - key: CLIENT_ORIGIN
+        sync: false

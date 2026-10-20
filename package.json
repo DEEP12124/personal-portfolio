@@ -1,0 +1,7 @@
+{
+  "name": "dipanshu-mern-portfolio", "version": "1.0.0", "private": true,
+  "type": "module", "workspaces": ["client", "server"],
+  "scripts": {"dev":"vite --config client/vite.config.js --host 0.0.0.0", "build":"vite build --config client/vite.config.js", "start":"npm start --workspace server", "test":"npm test --workspace server", "check":"npm test && npm run build"},
+  "engines":{"node":">=22"},
+  "devDependencies":{"vite":"^6.1.0","@vitejs/plugin-react":"^4.3.4"}
+}
