@@ -13,6 +13,6 @@ export const projects = [
 export const skillGroups = [
   {number:'01',title:'Frontend',subtitle:'Interfaces, motion and the browser.',items:[['React / React Router','Practicing',64],['JavaScript','Practicing',65],['HTML / CSS','Practicing',68]]},
   {number:'02',title:'Backend & databases',subtitle:'APIs and the data behind them.',items:[['Node.js / Express','Practicing',60],['MongoDB / Mongoose','Building foundations',58],['SQL','Foundation',65]]},
-  {number:'03',title:'AI & machine learning',subtitle:'Experiments with intelligent systems.',items:[['Python / scikit-learn','Applied in projects',84],['PyTorch / TensorFlow','Project experience',78],['Pandas / NumPy','Data workflows',82]]},
+  {number:'03',title:'AI & machine learning',subtitle:'Experiments with intelligent systems.',items:[['Python / scikit-learn','Applied in projects',84],['PyTorch / TensorFlow','Project experience',78],['Deep learning / neural networks','Learning and exploring',60],['Generative AI','Currently learning',42],['Pandas / NumPy','Data workflows',82]]},
   {number:'04',title:'Tools & technologies',subtitle:'A creative production toolkit.',items:[['Git / GitHub','Project workflow',68],['Premiere Pro / After Effects','Creative practice',86],['Blender / DaVinci Resolve','Creative practice',78]]}
 ];
