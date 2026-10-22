@@ -121,3 +121,24 @@ main,.site-header,footer{position:relative}
  .constellation-wrap{opacity:.15}
  [data-magnetic]{transform:none!important}
 }
+
+/* Override the older studio grid rules without changing unrelated sections. */
+.hero.hero-magical .hero-copy{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0}
+.hero.hero-magical .studio-name{padding-right:0;width:auto}
+.hero.hero-magical .studio-name .hero-surname{display:block;justify-content:center;margin-top:0;color:var(--text);gap:0}
+.hero.hero-magical .hero-intro,.hero.hero-magical .hero-role,.hero.hero-magical .hero-description,.hero.hero-magical .hero-buttons,.hero.hero-magical .hero-meta{grid-column:auto;grid-row:auto;margin-bottom:0}
+.hero.hero-magical .hero-intro{margin-bottom:30px}
+.hero.hero-magical .hero-role{margin-top:34px}
+.hero.hero-magical .hero-description{margin-top:24px}
+.hero.hero-magical .hero-buttons{margin-top:34px}
+.hero.hero-magical .hero-meta{margin-top:48px}
+.hero.hero-magical .hero-surname .name-star{display:inline-block;vertical-align:initial}
+.hero.hero-magical .hero-aurora{z-index:-2}
+.hero.hero-magical .constellation-wrap{z-index:-1}
+@media(max-width:620px){
+ .hero.hero-magical .hero-intro{margin-bottom:27px}
+ .hero.hero-magical .hero-role{margin-top:30px}
+ .hero.hero-magical .hero-description{margin-top:17px}
+ .hero.hero-magical .hero-buttons{margin-top:26px}
+ .hero.hero-magical .hero-meta{margin-top:33px}
+}
