@@ -4,18 +4,17 @@ A personal portfolio using React, React Router, JavaScript and CSS, with a Node.
 
 The studio design uses warm ivory, coral typography, an oversized name and a film contact sheet inspired by visual storytelling. A dark theme, reduced-motion support, project filters and three interactive concept demos are included.
 
-## Links and current status
+## 🌐 Live Demo
 
-| Item | Status |
-| --- | --- |
-| Public source | https://github.com/DEEP12124/personal-portfolio |
-| Temporary public preview | https://dipanshu-ai-portfolio.fancyllama2.chatgpt.site |
-| Required Vercel/Netlify frontend | Deployment pending |
-| Required Render/Railway backend | Deployment pending |
-| Live MongoDB contact persistence | Atlas environment setup and live verification pending |
-| Updated studio design | Committed in this repository; the earlier preview is not automatically synced with GitHub |
+**Frontend (Vercel):** https://dipanshu-bansal.vercel.app
 
-The temporary preview is a frontend review build. It has static résumé downloads and an email fallback. It is not proof of a fully connected MERN deployment. Final deployment must use Express for both résumé formats and MongoDB for contact messages.
+**Backend (Render):** https://dipanshu-portfolio-api.onrender.com
+
+**API health check:** https://dipanshu-portfolio-api.onrender.com/api/health
+
+**GitHub repository:** https://github.com/DEEP12124/personal-portfolio
+
+> The live site has been deployed and the MongoDB-backed contact form was previously verified. Render's free service can sleep during inactivity, causing a delay on the first request. After domain changes, recheck the contact form and CORS configuration.
 
 ## Assignment features
 
@@ -108,14 +107,14 @@ VITE_REPOSITORY_URL=https://github.com/DEEP12124/personal-portfolio
 
 Optionally set `VITE_PROFILE_PHOTO_URL` to the owner's photo URL or a public asset path. Rebuild after changing frontend environment variables. Alternatively, Netlify uses the provided `netlify.toml`.
 
-Update Render's `CLIENT_ORIGIN` to the actual Vercel/Netlify origin and restart the API. Do not put a MongoDB URI or other secret in a `VITE_` variable.
+For the current deployment, set Render's `CLIENT_ORIGIN` to `https://dipanshu-bansal.vercel.app` (no trailing slash) and redeploy the API. If multiple origins are required, use a comma-separated list. Do not put a MongoDB URI or other secret in a `VITE_` variable.
 
 ### 4. Verify and submit
 
 - Submit a labelled test message using the public frontend and confirm its record in Atlas.
 - Download PDF and DOCX through the Render `/api/resume/...` routes.
 - Reload all three `/lab/...` routes directly and test themes, filters and mobile layout.
-- Replace pending deployment rows above with verified public frontend/backend URLs.
+- Confirm the live frontend/backend URLs above still resolve.
 - Submit this public GitHub repository link in Google Classroom before the deadline.
 
 ## API
@@ -131,7 +130,7 @@ Contact fields: `name` (2–80 characters), `email` (valid address, at most 254 
 
 ## Verification limits
 
-The earlier local run passed all 8 API tests and a production build. Tests inject the storage boundary; they do not prove a real Atlas connection. The latest source changes are checked by GitHub Actions when available. Live browser visual QA and a real MongoDB message round-trip remain necessary before calling the assignment complete.
+The earlier local run passed all 8 API tests and a production build. Tests inject the storage boundary; they do not prove a real Atlas connection. The latest source changes are checked by GitHub Actions when available. The user previously confirmed a MongoDB Compass message round-trip; retest after deployment or domain changes. Live browser visual QA remains recommended.
 
 ## Environment safety
 
