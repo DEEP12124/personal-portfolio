@@ -1,143 +1,145 @@
-# Dipanshu Bansal — Personal MERN Portfolio
+<div align="center">
 
-A personal portfolio using React, React Router, JavaScript and CSS, with a Node.js/Express REST API and MongoDB/Mongoose contact storage.
+# DIPANSHU BANSAL
+### Building intelligent experiences. Designing with intention.
 
-The studio design uses warm ivory, coral typography, an oversized name and a film contact sheet inspired by visual storytelling. A dark theme, reduced-motion support, project filters and three interactive concept demos are included.
+**AI / ML Enthusiast · Full-Stack Developer · Creative Technologist**
+
+A portfolio where engineering meets visual storytelling — from machine learning concepts to interactive web experiences.
+
+[![Explore Live Portfolio](https://img.shields.io/badge/EXPLORE_LIVE_PORTFOLIO-CC5037?style=for-the-badge&logo=vercel&logoColor=white)](https://dipanshu-bansal.vercel.app)
+[![View Source](https://img.shields.io/badge/VIEW_SOURCE-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DEEP12124/personal-portfolio)
+
+**[dipanshu-bansal.vercel.app](https://dipanshu-bansal.vercel.app)**
+
+</div>
+
+---
+
+## ✨ The Idea
+
+**More than a digital résumé.** A thoughtfully crafted corner of the web that brings together development, artificial intelligence, experimentation and design. Built to feel personal, expressive and polished — without compromising on real functionality.
 
 ## 🌐 Live Demo
 
-**Frontend (Vercel):** https://dipanshu-bansal.vercel.app
+**[→ Visit Dipanshu's Portfolio](https://dipanshu-bansal.vercel.app)**
 
-**Backend (Render):** https://dipanshu-portfolio-api.onrender.com
+The public website runs on Vercel, with a separate Express API and MongoDB-backed contact storage behind the scenes. Only the visitor-facing portfolio is linked here.
 
-**API health check:** https://dipanshu-portfolio-api.onrender.com/api/health
+## 🛠️ Tech Stack
 
-**GitHub repository:** https://github.com/DEEP12124/personal-portfolio
+| Layer | Technologies |
+|:--|:--|
+| **Frontend** | React 19 · React Router · JavaScript · CSS · Vite |
+| **Backend** | Node.js · Express.js |
+| **Database** | MongoDB Atlas · Mongoose |
+| **Deployment** | Vercel · Render |
+| **Quality** | Node.js test runner · GitHub Actions |
 
-> The live site has been deployed and the MongoDB-backed contact form was previously verified. Render's free service can sleep during inactivity, causing a delay on the first request. After domain changes, recheck the contact form and CORS configuration.
+## 💫 What You'll Find
 
-## Assignment features
+- **Statement-making introduction** — bold typography, animated text and a distinctive editorial aesthetic.
+- **Interactive portfolio** — responsive layouts, dark/light themes, hover effects and scroll-based reveals.
+- **Selected projects** — AI/ML-inspired work and interactive concept demonstrations.
+- **Skills and journey** — a curated view of technologies, education and ongoing learning.
+- **Downloadable résumé** — PDF and Word formats served by the backend.
+- **A working contact form** — validated submissions stored in MongoDB, with feedback on success and failure.
+- **Accessible motion** — reduced-motion preferences respected.
 
-- Animated name/intro, typewriter role, scroll reveals, hover interactions and a download CV CTA.
-- About, student status and profile-photo configuration; an initials monogram is used until the owner supplies a headshot.
-- Frontend, backend/database, AI and tools skill groups with animated bars and practice-level tooltips.
-- Three project cards with technology filters, repository source links and interactive React Router demo routes.
-- Education/creative timeline and certifications accurately labelled in progress.
-- Persistent light/dark mode and responsive mobile/tablet/desktop CSS.
-- PDF and Word files served through Express download routes.
-- Contact form with validation, loading/error/success states; Mongoose storage succeeds before HTTP 201 is returned.
-- CORS allowlist, payload limits, rate limiting and environment examples without credentials.
-- GitHub Actions runs the existing API tests and production build.
-
-## Honest project content
-
-The résumé describes Hospital Management with Predictive Analytics, CCTV Weapon Detection, and Movie Recommendations. Their original trained models and project repository URLs were not supplied. The included demos are clearly labelled new concepts using synthetic/sample data: a filterable patient dashboard with CSV export, a detection-box visualization, and a deterministic genre-based film explorer. They do not claim to run the original ML systems. The source link opens the implemented demo code in this repository.
-
-A real profile photo, exact location, study years, original project URLs and verified certificate images/links remain owner-supplied content. No graduation dates, completed credentials or work experience were fabricated.
-
-## Repository structure
+## 🧩 How It Works
 
 ```text
-client/
-  src/             React portfolio, styles and interactive demos
-  public/resume/   Files for the temporary static preview
-server/
-  src/             Express routes and Mongoose Message model
-  resumes/         PDF and DOCX served by the backend
-  test/            API tests
-docs/              Deployment and assignment checklists
-.github/workflows/ Automated validation
+                  VISITOR
+                     |
+                     v
+           React + Vite Portfolio
+                (Vercel)
+                     |
+              HTTPS API calls
+                     |
+                     v
+            Node.js + Express
+                 (Render)
+                     |
+                     v
+            MongoDB Atlas
+             Contact messages
 ```
 
-## Local setup
+## 📁 Project Structure
 
-Use Node.js 22+, npm, and MongoDB locally or through Atlas.
+```text
+personal-portfolio/
+├── client/             # React application, styles and interactive demos
+├── server/             # Express API, MongoDB models, routes and tests
+├── docs/               # Project documentation
+├── scripts/            # Development utilities
+├── .github/workflows/  # Automated checks
+├── render.yaml         # Backend deployment configuration
+├── vercel.json         # Frontend deployment configuration
+└── README.md
+```
 
-```sh
+## 🚀 Run Locally
+
+**Requirements:** Node.js 22+, npm, and a MongoDB instance or Atlas cluster.
+
+```bash
+git clone https://github.com/DEEP12124/personal-portfolio.git
+cd personal-portfolio
 npm ci
+```
+
+Create local environment files using the credential-free examples:
+
+```bash
 cp server/.env.example server/.env
 cp client/.env.example client/.env
-# Optional local MongoDB, if Docker is available:
-docker compose up -d mongodb
 ```
 
-On Windows PowerShell use `Copy-Item` instead of `cp`. The server example contains a localhost MongoDB URI. Set the actual URI only in the server environment. Run these in separate terminals from the repository root:
+> On Windows PowerShell, use `Copy-Item` instead of `cp`. Set `MONGODB_URI` in the server's local environment only; never commit credentials.
 
-```sh
+Start the API and frontend in **separate terminals**:
+
+```bash
 npm run dev --workspace server
+```
+
+```bash
 npm run dev
 ```
 
-Open `http://localhost:5173`. Vite proxies `/api` to port 5000. Leave `VITE_API_URL` empty locally. Without MongoDB, the server still serves CV files and accurately returns HTTP 503 for contact requests.
+Open **http://localhost:5173**.
 
-```sh
+## 🧪 Verify the Build
+
+```bash
 npm test
 npm run build
 ```
 
-## Deploy the assignment
+## ☁️ Deployment Notes
 
-### 1. MongoDB Atlas
+- **Frontend:** Deploy the repository to Vercel using the included `vercel.json`. Set `VITE_API_URL` to the Render API origin.
+- **Backend:** Deploy Express to Render using `render.yaml` and set `MONGODB_URI` securely.
+- **Cross-origin requests:** Set `CLIENT_ORIGIN=https://dipanshu-bansal.vercel.app` on Render and redeploy when the domain changes.
+- **Database:** Use MongoDB Atlas and verify the contact collection after sending a test message.
+- **Free hosting:** The API may take extra time to respond after inactivity on Render's free tier.
 
-Create/select a cluster and a database user with access to `dipanshu_portfolio`. Obtain its driver connection URI and allow the Render service's outbound IP ranges in Atlas Network Access. Save the URI only as a server secret.
+## 🎯 Project Integrity
 
-### 2. Render backend
+The interactive demos use sample/synthetic data and are not presented as deployed production ML models. Certifications and project claims are kept aligned with available evidence.
 
-Import this repository as a Blueprint using the included `render.yaml`, or create a Node web service with:
+---
 
-- Root Directory: repository root.
-- Build Command: `npm ci --omit=dev --workspace server --include-workspace-root=false`.
-- Start Command: `npm start --workspace server`.
-- Health Check Path: `/api/health`.
-- `MONGODB_URI`: actual Atlas URI, entered in Render's environment settings.
-- `CLIENT_ORIGIN`: exact HTTPS origin of the final frontend, without a trailing slash.
-- `NODE_ENV=production`, `TRUST_PROXY_HOPS=1`.
+<div align="center">
 
-The health endpoint returns HTTP 200 only when MongoDB is connected. Confirm that before treating the API as ready.
+### Have an idea worth building?
 
-### 3. Vercel frontend
+**[Let's connect →](https://dipanshu-bansal.vercel.app/#contact)**
 
-Import the same repository. Keep Root Directory at the repository root. The included `vercel.json` sets `npm run build`, output directory `dist` and SPA rewrites. Set:
+*Made with curiosity, code and a little obsession with the details.*
 
-```text
-VITE_API_URL=<actual Render backend origin>
-VITE_STATIC_PREVIEW=false
-VITE_REPOSITORY_URL=https://github.com/DEEP12124/personal-portfolio
-```
+**© Dipanshu Bansal**
 
-Optionally set `VITE_PROFILE_PHOTO_URL` to the owner's photo URL or a public asset path. Rebuild after changing frontend environment variables. Alternatively, Netlify uses the provided `netlify.toml`.
-
-For the current deployment, set Render's `CLIENT_ORIGIN` to `https://dipanshu-bansal.vercel.app` (no trailing slash) and redeploy the API. If multiple origins are required, use a comma-separated list. Do not put a MongoDB URI or other secret in a `VITE_` variable.
-
-### 4. Verify and submit
-
-- Submit a labelled test message using the public frontend and confirm its record in Atlas.
-- Download PDF and DOCX through the Render `/api/resume/...` routes.
-- Reload all three `/lab/...` routes directly and test themes, filters and mobile layout.
-- Confirm the live frontend/backend URLs above still resolve.
-- Submit this public GitHub repository link in Google Classroom before the deadline.
-
-## API
-
-| Method | Route | Behavior |
-| --- | --- | --- |
-| GET | `/api/health` | Reports MongoDB readiness; HTTP 200 or 503 |
-| POST | `/api/contact` | Validates name/email/message and stores a Message |
-| GET | `/api/resume/pdf` | PDF attachment response |
-| GET | `/api/resume/docx` | Word attachment response |
-
-Contact fields: `name` (2–80 characters), `email` (valid address, at most 254 characters), and `message` (10–5000 characters). The optional hidden `website` honeypot must remain empty. There is no public endpoint for reading messages. Optional Nodemailer notifications are not implemented.
-
-## Verification limits
-
-The earlier local run passed all 8 API tests and a production build. Tests inject the storage boundary; they do not prove a real Atlas connection. The latest source changes are checked by GitHub Actions when available. The user previously confirmed a MongoDB Compass message round-trip; retest after deployment or domain changes. Live browser visual QA remains recommended.
-
-## Environment safety
-
-`.gitignore` excludes `node_modules`, `.env` and other local environment files, while allowing the credential-free `.env.example` templates. Do not include secrets when using the GitHub browser uploader.
-
-## References
-
-- [Render Blueprint documentation](https://render.com/docs/blueprint-spec)
-- [Vite on Vercel](https://vercel.com/docs/frameworks/frontend/vite)
-- [MongoDB Atlas network access](https://www.mongodb.com/docs/atlas/security/ip-access-list/)
+</div>
