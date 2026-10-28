@@ -4,7 +4,7 @@ import Message from './models/Message.js';
 import { createApp } from './app.js';
 mongoose.set('bufferCommands',false);
 const port=Number(process.env.PORT)||5000;
-const origins=(process.env.CLIENT_ORIGIN||'http://localhost:5173,http://localhost:4173').split(',').map(x=>x.trim()).filter(Boolean);
+const origins=[...new Set([...(process.env.CLIENT_ORIGIN||'http://localhost:5173,http://localhost:4173').split(',').map(x=>x.trim()).filter(Boolean),'https://dipanshu-bansal.vercel.app'])];
 const app=createApp({messageStore:Message,isDatabaseReady:()=>mongoose.connection.readyState===1,origins,production:process.env.NODE_ENV==='production',trustProxy:Number(process.env.TRUST_PROXY_HOPS||1)});
 const server=app.listen(port,()=>console.log(`Portfolio API listening on port ${port}.`));
 let reconnectTimer;
